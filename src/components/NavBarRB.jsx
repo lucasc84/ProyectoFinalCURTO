@@ -8,14 +8,18 @@ function NavBarRB() {
   return (
     <>
       <Navbar bg="primary" data-bs-theme="dark">
-        <Container>
-          <Navbar.Brand href="#home"><img  className= 'logo'src="/logo.png" alt="logo" /></Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link href="#home">HOMBRE</Nav.Link>
-            <Nav.Link href="#features">MUJER</Nav.Link>
-            <Nav.Link href="#pricing">ACCESORIOS</Nav.Link>
-            <CartWidget/>
-          </Nav>
+        <Container className="d-flex justify-content-between align-items-center">
+          <div className="d-flex align-items-center w-100 justify-content-between">
+            <Navbar.Brand href="#home">
+              <img className="logo" src="/logo.png" alt="logo" />
+            </Navbar.Brand>
+            <Nav className="d-flex align-items-center">
+              <Nav.Link href="#home">HOMBRE</Nav.Link>
+              <Nav.Link href="#features">MUJER</Nav.Link>
+              <Nav.Link href="#pricing">ACCESORIOS</Nav.Link>
+              <CartWidget />
+            </Nav>
+          </div>
         </Container>
       </Navbar>
     </>
