@@ -1,12 +1,15 @@
 import './App.css'
-import NavBar from './components/NavBar'
-import ItemCount from './components/ItemCount'
+import NavBarRB from './components/NavBarRB'
+import ItemListContainer from './components/ItemListContainer'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
 function App() {
 
   return (
     <>
-    <NavBar/>
-    <ItemCount/>
+        <NavBarRB/>
+        <ItemListContainer mensaje="Bienvenidos a la Tienda Online de Poseidon"/>
     </>
   )
 }
