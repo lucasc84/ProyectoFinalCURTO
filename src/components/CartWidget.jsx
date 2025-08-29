@@ -3,7 +3,7 @@ import Badge from 'react-bootstrap/Badge';
 
 const CartWidget = () => {
     return (
-        <div>
+        <div className="cart-widget" aria-label="Carrito de compras">
             <PiShoppingCartSimpleFill fontSize={"2rem"}/>
                   <Badge bg="info">3</Badge>
         </div>
