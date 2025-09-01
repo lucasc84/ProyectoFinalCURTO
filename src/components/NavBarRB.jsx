@@ -13,10 +13,10 @@ function NavBarRB() {
             <Navbar.Brand href="#home">
               <img className="logo" src="/logo.png" alt="logo" />
             </Navbar.Brand>
-            <Nav className="d-flex align-items-center">
-              <Nav.Link href="#hombre">HOMBRE</Nav.Link>
-              <Nav.Link href="#mujer">MUJER</Nav.Link>
-              <Nav.Link href="#accesorios">ACCESORIOS</Nav.Link>
+            <Nav className="d-flex align-items-center navbar-font">
+              <Nav.Link href="#home" className="nav-spacing">HOMBRE</Nav.Link>
+              <Nav.Link href="#features" className="nav-spacing">MUJER</Nav.Link>
+              <Nav.Link href="#pricing" className="nav-spacing">ACCESORIOS</Nav.Link>
               <CartWidget />
             </Nav>
           </div>

@@ -4,13 +4,13 @@ import ItemListContainer from './components/ItemListContainer'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-function App() {
 
+function App() {
   return (
-    <>
-        <NavBarRB/>
-        <ItemListContainer mensaje="Bienvenidos a la Tienda Online de Poseidon"/>
-    </>
+    <div className="main-bg-custom">
+      <NavBarRB/>
+      <ItemListContainer mensaje="Bienvenidos a la Tienda Online de Poseidon"/>
+    </div>
   )
 }
 
