@@ -1,21 +1,25 @@
-import { useState, useEffect, use } from 'react'
-import {getProductos} from '../mock/AsyncMockService'
+import { useState, useEffect} from 'react'
+import {getProducts} from '../mock/AsyncMockService'
+import ItemList from './ItemList'
 
 const ItemListContainer = ({mensaje}) => {
 
     const [data, setData] = useState([])
 
     useEffect(() => {
-        getProductos()
-        .then((res) => console.log (res))
+        getProducts()
+        .then((res) => setData (res))
+        .catch ((error) => console.log (error))
 
     }, [])
 
 
-    console.log(' ItemListContainer' )
+    console.log(data)
     return(
     <div>
         <h1>{mensaje}</h1>
+        {/* {data.map (prod => <p key={prod.id}>{prod.name}</p>)} */}
+        <ItemList data={data}/>
     </div>
     )
   }

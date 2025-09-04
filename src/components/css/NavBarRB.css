@@ -10,6 +10,7 @@
 .main-bg-custom {
   background-color: #0a1931;
   min-height: 100vh;
+  color: white;
 }
 
 /* Fuente personalizada para los elementos del navbar */

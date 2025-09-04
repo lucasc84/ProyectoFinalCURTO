@@ -1,7 +1,7 @@
 const productos = [
   {
     id: '1',
-    title: 'Short',
+    name: 'Short',
     description: 'Short de entrenamiento resistente al cloro, pensado para sesiones frecuentes. Ajuste cómodo con soporte frontal y cintura segura. Secado rápido y tejido durable que mantiene forma y color. Ideal para piscina y trabajos de técnica.',
     price: 100,
     stock: 10,
@@ -10,7 +10,7 @@ const productos = [
   },
     {
     id: '2',
-    title: 'Jammer',
+    name: 'Jammer',
     description: 'Jammer hidrodinámico para entrenamientos intensivos. Reduce la resistencia al avance y ofrece sujeción muscular suave. Tejido de secado rápido, alta resistencia al cloro y protección UV. Ajuste firme sin sacrificar comodidad ni movilidad.',
     price: 100,
     stock: 10,
@@ -21,7 +21,7 @@ const productos = [
 
 
 let error = false
-export const getProductos = () => {
+export const getProducts = () => {
   return new Promise((resolve, reject) => {
     setTimeout(() =>{
         if (error) {
