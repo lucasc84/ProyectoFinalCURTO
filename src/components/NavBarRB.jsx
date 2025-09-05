@@ -14,9 +14,9 @@ function NavBarRB() {
               <img className="logo" src="/logo.png" alt="logo" />
             </Navbar.Brand>
             <Nav className="d-flex align-items-center navbar-font">
-              <Nav.Link href="#home" className="nav-spacing">HOMBRE</Nav.Link>
-              <Nav.Link href="#features" className="nav-spacing">MUJER</Nav.Link>
-              <Nav.Link href="#pricing" className="nav-spacing">ACCESORIOS</Nav.Link>
+              <Nav.Link href="#hombre" className="nav-spacing">HOMBRE</Nav.Link>
+              <Nav.Link href="#mujer" className="nav-spacing">MUJER</Nav.Link>
+              <Nav.Link href="#accesorios" className="nav-spacing">ACCESORIOS</Nav.Link>
               <CartWidget />
             </Nav>
           </div>
