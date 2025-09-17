@@ -113,3 +113,14 @@ export const getProducts = () => {
     }, 2000);
   });
 }
+
+
+// OPCION 1 - Funcion que devuelve un item
+export const getOneProduct = (id) => {
+  return new Promise((resolve) => {
+    setTimeout(() =>{
+let prod = productos.find ((prod) => prod.id === id)
+resolve (prod)
+    }, 2000);
+  })
+}
