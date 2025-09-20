@@ -1,3 +1,6 @@
+//App es el padre de los demas componentes, se copnfigura y se da acceso a la navegación, no se aplican estilos
+
+
 import './App.css'
 import NavBarRB from './components/NavBarRB'
 import ItemListContainer from './components/ItemListContainer'
@@ -17,6 +20,7 @@ function App() {
 
       <Routes>
         <Route path='/' element={<ItemListContainer mensaje="Bienvenidos a la Tienda Online de Poseidon"/>}/>
+        <Route path='/category/:type' element={<ItemListContainer mensaje="Estas en la sección: "/>}/>
         <Route path='/item/:id' element={<ItemDetailContainer/>}/>
         <Route path='*' element={<Error404/>}/>
 

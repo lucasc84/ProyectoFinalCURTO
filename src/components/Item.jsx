@@ -1,3 +1,8 @@
+
+//Item es el componente que representa cada producto individual en una tarjeta
+//Recibe la prop "prod" que contiene los detalles del producto
+//Incluye un enlace para ver más detalles del producto
+
 import React from 'react'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'

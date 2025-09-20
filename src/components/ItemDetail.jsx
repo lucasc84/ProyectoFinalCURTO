@@ -1,3 +1,5 @@
+// ItemDetail muestra el detalle de un producto seleccionado. Recibe el objeto detalle de ItemDetailContainer por props y lo renderiza.
+
 import React from 'react'
 
 const ItemDetail = ({ detalle }) => {

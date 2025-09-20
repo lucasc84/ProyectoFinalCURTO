@@ -1,3 +1,5 @@
+// Itemlist renderiza una lista de productos recibiendo un array de objetos como prop "data". Solo se encarga de hacer el map y devolver un Item por cada producto.
+
 import React from 'react'
 import Item from './Item'
 

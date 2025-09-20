@@ -1,3 +1,8 @@
+// ItemDetailContainer posee un estado para guardar el detalle del producto que se va a mostrar
+// usa useParams para leer el id que viene en la URL
+// usa useEffect para llamar a la promesa que trae el producto segun el id
+// le pasa el detalle a su hijo ItemDetail
+
 import React,{ useState, useEffect} from 'react'
 import ItemDetail from './ItemDetail'
 import {getOneProduct} from '../mock/AsyncMockService'
