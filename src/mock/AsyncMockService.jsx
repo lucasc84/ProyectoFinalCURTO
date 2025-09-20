@@ -1,6 +1,6 @@
 const productos = [
   {
-    id: '1',
+    id: '01',
     name: 'Short',
     description: 'Short de entrenamiento resistente al cloro, pensado para sesiones frecuentes. Ajuste cómodo con soporte frontal y cintura segura. Secado rápido y tejido durable que mantiene forma y color. Ideal para piscina y trabajos de técnica.',
     price: 65000,
@@ -9,7 +9,7 @@ const productos = [
     image: '/img/hombre-short.webp',
   },
     {
-    id: '2',
+    id: '02',
     name: 'Jammer',
     description: 'Jammer hidrodinámico para entrenamientos intensivos. Reduce la resistencia al avance y ofrece sujeción muscular suave. Tejido de secado rápido, alta resistencia al cloro y protección UV. Ajuste firme sin sacrificar comodidad ni movilidad.',
     price: 70000,
@@ -18,7 +18,7 @@ const productos = [
     image: '/img/hombre-jammer.webp',
   },
       {
-    id: '3',
+    id: '03',
     name: 'Short de Baño',
     description: 'Short versátil para piscina y playa con calce relajado. Cintura elástica con cordón, bolsillos laterales y malla interior para mayor confort. Secado rápido y tejido liviano para moverte con libertad dentro y fuera del agua.',
     price: 60000,
@@ -26,7 +26,7 @@ const productos = [
     category: 'hombre',
     image: '/img/hombre-malla.webp',
   },    {
-    id: '4',
+    id: '04',
     name: 'Neoprene Masculino',
     description: 'Neoprene para aguas abiertas orientado a flotabilidad y abrigo. Paneles de distintos espesores que mejoran la posición en el agua, flexibilidad en hombros y puños para cambios rápidos. Cuello cómodo que minimiza rozaduras.',
     price: 120000,
@@ -34,7 +34,7 @@ const productos = [
     category: 'hombre',
     image: '/img/hombre-traje-neoprene.webp',
   },    {
-      id: '5',
+      id: '05',
     name: 'Malla Enteriza Clásica',
     description: 'Enteriza de uso intensivo con espalda que favorece la movilidad de hombros. Tejido duradero, resistente al cloro y de secado rápido. Soporte frontal y calce que acompaña sin comprimir. Ideal para entrenar a diario..',
     price: 65000,
@@ -42,7 +42,7 @@ const productos = [
     category: 'mujer',
     image: '/img/mujer-malla-enterisa-clasica.webp',
   },    {
-    id: '6',
+    id: '06',
         name: 'Malla Enteriza Powerskin',
     description: 'Enteriza de rendimiento orientada a velocidad y compresión estratégica. Tejido liviano e hidrodinámico que reduce turbulencias. Sujeción focalizada que mantiene la energía muscular sin limitar la movilidad. Apta para sesiones exigentes.',
     price: 75000,
@@ -50,7 +50,7 @@ const productos = [
     category: 'mujer',
     image: '/img/mujer-malla-enterisa-powerskin.webp',
   },    {
-  id: '7',
+  id: '07',
     name: 'Bikini',
     description: 'Bikini de entrenamiento con alta resistencia al cloro. Calce seguro y libertad total de movimiento para series largas. Secado rápido y colores estables. Forrería frontal para mayor comodidad y confianza en cada brazada.',
     price: 55000,
@@ -58,7 +58,7 @@ const productos = [
     category: 'mujer',
     image: '/img/mujer-bikini.webp',
   },    {
-    id: '8',
+    id: '08',
     name: 'Neoprene Femenino',
     description: 'Neoprene para nadadoras de aguas abiertas que combina flotabilidad, flexibilidad y aislamiento térmico. Corte que evita rozaduras en cuello y costuras selladas para mayor confort. Facilita una postura eficiente y brazadas fluidas.',
     price: 120000,
@@ -66,7 +66,7 @@ const productos = [
     category: 'mujer',
     image: '/img/mujer-traje-neoprene.webp',
   },    {
-    id: '9',
+    id: '09',
     name: 'Antiparras',
     description: 'Antiparras con sello cómodo y estable que reduce presión en el contorno ocular. Lentes con protección UV y tratamiento antiempañante para visión clara. Tira ajustable y perfil bajo para entrenar sin distracciones.',
     price: 23000,

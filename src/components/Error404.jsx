@@ -1,9 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Error = () => {
   return (
     <div>
-      Eror 404: Página no encontrada 🚫
+      <h1>Eror 404: Página no encontrada 🚫</h1>
+      <Link className ='btn btn-primary' to="/">Volver al inicio</Link>
     </div>
   )
 }
