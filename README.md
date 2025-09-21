@@ -1,42 +1,50 @@
 # CODERHOUSE
 Curso de React JS  
 Comisión  81735 
-Alumno: Lucas Curto  
+Alumno: Lucas Curto
 
 Proyecto:  
-Preentrega 1 - **Crea tu Landing**
+Preentrega 2 - **Navega las rutas**
 
+---
 
 ## Descripción del proyecto
 
-Este proyecto corresponde a la primera preentrega del curso de React JS.  
-La consigna consiste en crear los primeros componentes base de un e-commerce: una barra de navegación, un widget de carrito y un contenedor para mostrar un mensaje de bienvenida.
+Este proyecto corresponde a la segunda preentrega del curso de React JS.  
+La consigna se centra en implementar **navegación con React Router**, rutas dinámicas por categoría y detalle de producto, además de contenedores que gestionan datos simulados de manera asíncrona.
 
-La aplicación utiliza **React + Vite** y está organizada en componentes dentro de la carpeta `src/components`.  
-Se implementaron librerías externas como **React-Bootstrap** y **React Icons** para simplificar el maquetado y darle estilos.
+El proyecto toma como base la **Preentrega 1**, donde se había creado la estructura inicial con NavBar, CartWidget e ItemListContainer, y evoluciona incorporando los nuevos contenidos trabajados en clase.
 
+---
 
 ## Funcionalidades
 
-- **Componente `NavBar`**  
-  - Muestra el logo de la tienda.  
-  - Incluye enlaces de navegación simulando categorías de productos.  
-  - Renderiza dentro suyo al componente `CartWidget`.  
+- **Navegación principal (NavBar)**  
+  - Implementada con `NavLink` para permitir navegación sin recarga.  
+  - Contiene accesos a las tres categorías principales: Hombre, Mujer y Accesorios.  
+  - Incluye el `CartWidget` como en la entrega anterior.
 
-- **Componente `CartWidget`**  
-  - Muestra un ícono de carrito de compras.  
-  - Contiene una burbuja con un número **estático** .  
+- **Catálogo de productos**  
+  - `ItemListContainer` recibe parámetros de la URL con `useParams`.  
+  - Filtra productos por categoría (`/category/:type`) o muestra todos (`/`).  
+  - Los productos se obtienen mediante un **Promise simulado**, como se trabajó en clase.
 
-- **Componente `ItemListContainer`**  
-  - Se renderiza debajo de la barra de navegación.  
-  - Recibe una **prop** llamada `mensaje` desde `App.jsx`.  
-  - Muestra en pantalla ese mensaje (ej. “Bienvenidos a la Tienda Online de Poseidón”).  
+- **Detalle de producto**  
+  - `ItemDetailContainer` obtiene el producto a partir de su `id` (`/item/:id`).  
+  - Muestra un componente `ItemDetail` con información detallada.  
+  - Incluye un placeholder de `ItemCount` como base para la próxima entrega.
 
-- **Archivo `App.jsx`**  
-  - Renderiza en orden `NavBar` y luego `ItemListContainer`.  
-  - Se asegura la correcta jerarquía de componentes según lo pedido.  
+- **Rutas dinámicas y 404**  
+  - `/` → listado completo.  
+  - `/category/:type` → listado filtrado.  
+  - `/item/:id` → detalle de producto.  
+  - `*` → página de error 404 con opción de volver al inicio.
 
+---
 
 ## Nota
 
-La idea es que esta base funcione como **landing inicial del e-commerce**, y que en futuras entregas los componentes evolucionen. 
+Este proyecto muestra cómo se fue **escalando con los conocimientos adquiridos en clase**:  
+- La Preentrega 1 sentó las bases con los primeros componentes.  
+- En la Preentrega 2 incorporamos **ruteo dinámico**, **contenedores asincrónicos** y la **estructura de detalle**.  
+---
