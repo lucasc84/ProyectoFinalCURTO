@@ -15,7 +15,8 @@ const ItemDetail = ({ detalle }) => {
   return (
     <div>
 
-<Card bg = "info" border="primary" style={{ width: 'auto' }}>
+<Card bg = "info" border="primary"       className=" my-4 mx-4" 
+style={{ width: 'auto' }}>
       <Card.Title>{detalle?.name}</Card.Title>
       <Card.Body>
         
