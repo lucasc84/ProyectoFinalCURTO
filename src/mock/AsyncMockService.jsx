@@ -84,7 +84,7 @@ const productos = [
   },    {
     id: '11',
     name: 'Tapones de Oído',
-    description: 'apones de oído de silicona con diseño de triple aro que ayuda a evitar la entrada de agua. Ajuste suave y seguro, fácil de colocar y retirar. Permiten buena percepción del entorno sin comprometer el sellado.',
+    description: 'Tapones de oído de silicona con diseño de triple aro que ayuda a evitar la entrada de agua. Ajuste suave y seguro, fácil de colocar y retirar. Permiten buena percepción del entorno sin comprometer el sellado.',
     price: 12000,
     stock: 4,
     category: 'accesorios',
