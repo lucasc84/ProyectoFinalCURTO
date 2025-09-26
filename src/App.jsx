@@ -6,12 +6,15 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import ItemDetailContainer from "./components/ItemDetailContainer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Error404 from "./components/Error404";
+import { CartProvider } from "./context/CartContext";
 
 function App() {
   return (
     <BrowserRouter>
-      <NavBarRB />{" "}
+    <CartProvider>
+    <NavBarRB />
       {/* se deja afuera de las rutas para que se vea en todas las paginas */}
+
       <Routes>
         <Route
           path="/"
@@ -26,6 +29,7 @@ function App() {
         <Route path="/item/:id" element={<ItemDetailContainer />} />
         <Route path="*" element={<Error404 />} />
       </Routes>
+      </CartProvider>
     </BrowserRouter>
   );
 }
