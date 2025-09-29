@@ -7,18 +7,22 @@ import React,{ useState, useEffect} from 'react'
 import ItemDetail from './ItemDetail'
 import {getOneProduct} from '../mock/AsyncMockService'
 import {useParams} from 'react-router-dom'
+import Loader from './Loader'
 
 const ItemDetailContainer = () => {
     const [detalle, setDetalle] = useState({})
+    const [loading, setLoading] = useState (false)
 
     //para traer un dato dinamico de ña URL uso useParams
     const {id} = useParams()
 
 // OPCION 1 - Usando la funcion que devuelve un item
 useEffect (() => {
+  setLoading (true)
   getOneProduct (id)
   .then ((res) => setDetalle (res))
     .catch ((error) => console.log (error))
+    .finally (() => setLoading (false))
 }, [id]);
 
 
@@ -31,10 +35,16 @@ useEffect (() => {
 // }, [])
 
   return (
-    <div>
+     <>
+        {
+        loading
+        ? <Loader/>
+        : <>
       <ItemDetail detalle={detalle}/>
-    </div>
-  )
+    </>
+    }
+        </>
+    )
 }
 
 export default ItemDetailContainer
