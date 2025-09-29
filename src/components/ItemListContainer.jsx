@@ -7,15 +7,18 @@ import { useState, useEffect} from 'react'
 import {getProducts} from '../mock/AsyncMockService'
 import ItemList from './ItemList'
 import { useParams } from 'react-router-dom'
+import Loader from './Loader'
 
 const ItemListContainer = ({mensaje}) => {
 
     const [data, setData] = useState([])
+    const [loading, setLoading] = useState (false)
 
     const {type} = useParams()
     console.log('categoria', type)
 
     useEffect(() => {
+        setLoading (true)
         getProducts()
         .then((res) => {
             if (type) {
@@ -30,16 +33,24 @@ const ItemListContainer = ({mensaje}) => {
         .catch ((error) => console.log (error))
         // tiene que estar a la esuchca del cambio de type
 
+        .finally (() => setLoading (false))
+
     }, [type])
 
 
     console.log(data)
     return(
-    <div>
+        <>
+        {
+        loading
+        ? <Loader/>
+        : <>
         <h1>{mensaje} {type && <span style={{textTransform: 'capitalize'}}>{type}</span>}</h1>
         <ItemList data={data}/>
-    </div>
+    </>
+    }
+        </>
     )
-  }
+}
   
   export default ItemListContainer
