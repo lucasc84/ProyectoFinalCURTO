@@ -4,10 +4,11 @@
 //hecho, se la pasa a su hijo ItemList para que los renderice
 
 import { useState, useEffect} from 'react'
-import {getProducts} from '../mock/AsyncMockService'
 import ItemList from './ItemList'
 import { useParams } from 'react-router-dom'
 import Loader from './Loader'
+import { collection, getDocs, query, where} from 'firebase/firestore'
+import { db } from '../services/firebase'
 
 const ItemListContainer = ({mensaje}) => {
 
@@ -17,25 +18,51 @@ const ItemListContainer = ({mensaje}) => {
     const {type} = useParams()
     console.log('categoria', type)
 
+    //FIREBASE
     useEffect(() => {
         setLoading (true)
-        getProducts()
-        .then((res) => {
-            if (type) {
-                // si type existe, filtrar
-                setData (res.filter (prod => prod.category === type))
-            } else {
-                // si no existe, todos los productos
-                setData (res)
-            }
-        })
-
+        //conectar a la base de datos
+        const prodCollection = type
+        ? query (collection (db, 'productos'), where ('category', '==', type))
+        : collection (db, 'productos')
+        //pedir los datos (documentos) de la coleccion
+        getDocs (prodCollection)
+        .then ((res) => {
+            console.log (res.docs, 'docs')
+            const list = res.docs.map ((doc) => {
+                return {
+                    id: doc.id,
+                    ...doc.data()
+                }
+            })
+            setData (list)
+        })    
         .catch ((error) => console.log (error))
-        // tiene que estar a la esuchca del cambio de type
-
         .finally (() => setLoading (false))
-
     }, [type])
+
+
+
+// PROMESA
+//     useEffect(() => {
+//         setLoading (true)
+//         getProducts()
+//         .then((res) => {
+//             if (type) {
+//                 // si type existe, filtrar
+//                 setData (res.filter (prod => prod.category === type))
+//             } else {
+//                 // si no existe, todos los productos
+//                 setData (res)
+//             }
+//         })
+
+//         .catch ((error) => console.log (error))
+//         // tiene que estar a la esuchca del cambio de type
+
+//         .finally (() => setLoading (false))
+
+//     }, [type])
 
 
     console.log(data)
