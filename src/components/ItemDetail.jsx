@@ -4,16 +4,26 @@ import ItemCount from './ItemCount'
 import Card from 'react-bootstrap/Card'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { CartContext } from "../context/CartContext"; // Importa CartContext from "../context/CartContext"; // Ajusta la ruta si es necesario 
+import { Link } from 'react-router-dom';
 const ItemDetail = ({ detalle }) => {
+
+  
 
   const { addItem } = useContext(CartContext);
 
+  // const [quantityAdded, setQuantityAdded] = useState(0);
+  // // Estado para rastrear la cantidad agregada al carrito
+const [purchase, setPurchase] = useState(false);
+
+
   const onAdd = (cantidad) => {
     console.log(`Se agregaron ${cantidad} unidades de ${detalle?.name} al carrito`)
+    setPurchase(true);
     addItem(detalle, cantidad) // Llamada a la función addItem del contexto para agregar el item al carrito 
   }
+
 
 
 
@@ -29,10 +39,17 @@ const ItemDetail = ({ detalle }) => {
             <Col xs={12} md={6}>
               <Card.Title>{detalle?.name}</Card.Title>
               <Card.Text>
-                <div>{detalle?.description}</div>
-                <div>Precio: ${detalle?.price}</div>
-                <div>Stock disponible: {detalle?.stock}</div>
-                <ItemCount stock={detalle?.stock} onAdd={onAdd}/>
+                <p>{detalle?.description}</p>
+                <p>Precio: ${detalle?.price}</p>
+                <p>Stock disponible: {detalle?.stock}</p>
+                {/* sigo tal cual la consigna */}
+                {
+                purchase ? <Link className= "btn btn-dark" to="/cart">Terminar mi compra</Link>
+                : <ItemCount stock ={detalle?.stock} initial={1} onAdd={onAdd} />
+                }
+
+
+
               </Card.Text>
             </Col>
           </Row>
