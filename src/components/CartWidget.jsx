@@ -6,12 +6,15 @@ import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 
 const CartWidget = () => {
-    const {cart} = useContext(CartContext);
-    console.log(cart)
+    console.log("CartWidget Renderizado")
+    const {cart, cartQuantity} = useContext(CartContext);
+ 
+
+
     return (
         <div className="cart-widget" aria-label="Carrito de compras ">
             <PiShoppingCartSimpleFill fontSize={"2rem"}/>
-                  <Badge bg="info">3</Badge>
+            {cart.length > 0 && <Badge bg="info">{cartQuantity()}</Badge>}
         </div>
     );
 }

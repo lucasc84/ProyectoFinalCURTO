@@ -56,9 +56,20 @@ const isInCart = (id) => {
 }
 
 
+// funcion 5: total a pagar
+
+const total = () => {
+    return cart.reduce((acc, prod) => acc + (prod.price * prod.quantity), 0)
+}
+
+// funcion 6: total de items en el carrito - no usar length
+ const cartQuantity = () => {
+    return cart.reduce((acc, prod) => acc + prod.quantity, 0)
+ }
+
 
     return (
-        <CartContext.Provider value={{cart, addItem, clear, removeItem}}>
+        <CartContext.Provider value={{cart, addItem, clear, removeItem, total, cartQuantity}}>
             {children}
             {/*aqui van los estados y funciones que queramos compartir*/}
         </CartContext.Provider>

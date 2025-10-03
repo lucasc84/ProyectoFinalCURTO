@@ -5,8 +5,7 @@
 
 import React,{ useState, useEffect} from 'react'
 import ItemDetail from './ItemDetail'
-import {getOneProduct} from '../mock/AsyncMockService'
-import {useParams} from 'react-router-dom'
+import {Link, useParams} from 'react-router-dom'
 import Loader from './Loader'
 import { doc, getDoc } from 'firebase/firestore'
 import { db } from '../services/firebase' 
@@ -57,6 +56,13 @@ const ItemDetailContainer = () => {
 //   .then ((res) => setDetalle (res.find (prod => prod.id === '3')))
 //     .catch ((error) => console.log (error))
 // }, [])
+if (invalid) {
+  <div>
+    <h2>El producto que buscas no existe</h2>
+    <Link to='/' className ='btn btn-primary'>Volver al inicio</Link>
+  </div>
+}
+
 
   return (
      <>
