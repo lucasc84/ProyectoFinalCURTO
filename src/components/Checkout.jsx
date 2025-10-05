@@ -1,8 +1,8 @@
 import { serverTimestamp } from 'firebase/firestore'
 import React, { useState, useContext } from 'react'
 import { CartContext } from '../context/CartContext'
-import { addDoc, collection } from 'firebase/firestore'
-import { db } from '../services/firebase/firebaseConfig'
+import { addDoc, collection} from 'firebase/firestore'
+import { db } from '../services/firebase'
 import EmptyCart from './EmptyCart' // Asegúrate de tener este componente
 
 const Checkout = () => {

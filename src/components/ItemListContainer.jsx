@@ -4,11 +4,13 @@
 //hecho, se la pasa a su hijo ItemList para que los renderice
 
 import { useState, useEffect} from 'react'
+// import { getProducts, productos } from "../mock/AsyncMockService"
 import ItemList from './ItemList'
 import { useParams } from 'react-router-dom'
 import Loader from './Loader'
-import { collection, getDocs, query, where} from 'firebase/firestore'
-import { db } from '../services/firebase'
+import { collection, getDocs, query, where } from "firebase/firestore"
+import { db } from "../services/firebase"
+
 
 const ItemListContainer = ({mensaje}) => {
 
@@ -66,8 +68,19 @@ const ItemListContainer = ({mensaje}) => {
 
 
     console.log(data)
+
+ // SE HACE UNA SOLA VEZ Y DESPUES SE BORRA!!! 
+// const subirData = ()=>{
+// console.log('SUBIENDO DATA...')
+// const coleccionAAgregar= collection(db, "productos")
+// productos.map((prod)=> addDoc(coleccionAAgregar, prod))
+// }
+
+
     return(
         <>
+               {/* DESPUES SE BORRA!!!!
+<button onClick={subirData}>SUBIR DATA!</button> */}
         {
         loading
         ? <Loader/>
