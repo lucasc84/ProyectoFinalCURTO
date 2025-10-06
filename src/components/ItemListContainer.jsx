@@ -10,6 +10,7 @@ import { useParams } from 'react-router-dom'
 import Loader from './Loader'
 import { collection, getDocs, query, where } from "firebase/firestore"
 import { db } from "../services/firebase"
+import '../components/css/ItemListContainer.css';
 
 
 const ItemListContainer = ({mensaje}) => {
@@ -69,27 +70,18 @@ const ItemListContainer = ({mensaje}) => {
 
     console.log(data)
 
- // SE HACE UNA SOLA VEZ Y DESPUES SE BORRA!!! 
-// const subirData = ()=>{
-// console.log('SUBIENDO DATA...')
-// const coleccionAAgregar= collection(db, "productos")
-// productos.map((prod)=> addDoc(coleccionAAgregar, prod))
-// }
-
-
     return(
-        <>
-               {/* DESPUES SE BORRA!!!!
-<button onClick={subirData}>SUBIR DATA!</button> */}
+  <div className="fondo-seccion">
+
         {
         loading
         ? <Loader/>
         : <>
-        <h1>{mensaje} {type && <span style={{textTransform: 'capitalize'}}>{type}</span>}</h1>
+        <h1 className="mensaje-bienvenida">{mensaje} {type && <span style={{textTransform: 'capitalize'}}>{type}</span>}</h1>
         <ItemList data={data}/>
     </>
     }
-        </>
+        </div>
     )
 }
   

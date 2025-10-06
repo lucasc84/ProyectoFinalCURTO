@@ -1,0 +1,12 @@
+.mensaje-bienvenida {
+  font-size: 1.5rem;
+  color: #1976d2;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.fondo-seccion {
+  background-color: #cbe0ff; /* El color que prefieras */
+  min-height: 80vh;
+  padding: 2rem 0;
+}
