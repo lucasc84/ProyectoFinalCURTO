@@ -65,7 +65,7 @@ if (invalid) {
 
 
   return (
-     <>
+  <div className="fondo-seccion">
         {
         loading
         ? <Loader/>
@@ -73,7 +73,7 @@ if (invalid) {
       <ItemDetail detalle={detalle}/>
     </>
     }
-        </>
+        </div>
     )
 }
 

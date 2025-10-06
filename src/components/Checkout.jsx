@@ -47,7 +47,7 @@ const Checkout = () => {
   }
 
   return (
-    <>
+  <div className="fondo-seccion">
       {
         orderId ?
           <h2>
@@ -72,7 +72,7 @@ const Checkout = () => {
             </form>
           </div>
       }
-    </>
+          </div>
 
   )
 }

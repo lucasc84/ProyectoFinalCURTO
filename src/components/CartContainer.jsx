@@ -7,12 +7,11 @@ import CartView from './CartView'
 const CartContainer = () => {
     const {cart} = useContext(CartContext)
   return (
-    <>
-      !cart.length ?
-      <EmptyCart/>
-      :
-      <CartView/>
-    </>
+  <div className="fondo-seccion">
+  {
+        !cart.length ? <EmptyCart/> : <CartView/>
+    }
+    </div>
   )
 }
 
