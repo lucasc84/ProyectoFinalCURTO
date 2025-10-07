@@ -4,6 +4,9 @@ import { CartContext } from '../context/CartContext'
 import { addDoc, collection} from 'firebase/firestore'
 import { db } from '../services/firebase'
 import EmptyCart from './EmptyCart' // Asegúrate de tener este componente
+import Card from 'react-bootstrap/Card'
+import Row from 'react-bootstrap/Row'
+import './css/Checkout.css'
 
 const Checkout = () => {
   const [buyer, setBuyer] = useState({})
@@ -55,7 +58,12 @@ const Checkout = () => {
           </h2>
           :
           <div>
-            <h1>Complete el formulario con sus datos</h1>
+                  <Card bg="info" border="primary" className="mx-auto my-4 w-100" style={{ maxWidth: '900px' }}>
+        <Card.Body>
+          <Row>
+
+              <Card.Title>Complete el formulario con sus datos</Card.Title>
+
             <form onSubmit={finalizarCompra}>
               <input name="name" className="form-control" placeholder="Ingrese su nombre" type="text" onChange={buyerData} />
 
@@ -67,9 +75,10 @@ const Checkout = () => {
 
               <input name="second-email" className="form-control" placeholder="Repita su correo" type="email" onChange={(e) => setCheckMail(e.target.value)} />
               <button className="btn btn-primary" type="submit">Completar Compra</button>
-
-
             </form>
+          </Row>
+        </Card.Body>
+      </Card>
           </div>
       }
           </div>

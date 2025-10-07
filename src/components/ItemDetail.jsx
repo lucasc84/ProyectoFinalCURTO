@@ -5,7 +5,7 @@ import Card from 'react-bootstrap/Card'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import React, { useContext, useState } from "react";
-import { CartContext } from "../context/CartContext"; // Importa CartContext from "../context/CartContext"; // Ajusta la ruta si es necesario 
+import { CartContext } from "../context/CartContext"; // Importa CartContext desde "../context/CartContext"; // Ajusta la ruta si es necesario 
 import { Link } from 'react-router-dom';
 const ItemDetail = ({ detalle }) => {
 
@@ -39,18 +39,15 @@ const [purchase, setPurchase] = useState(false);
             <Col xs={12} md={6}>
               <Card.Title>{detalle?.name}</Card.Title>
               <Card.Text>
-                <p>{detalle?.description}</p>
-                <p>Precio: ${detalle?.price}</p>
-                <p>Stock disponible: {detalle?.stock}</p>
-                {/* sigo tal cual la consigna */}
-                {
-                purchase ? <Link className= "btn btn-dark" to="/cart">Terminar mi compra</Link>
-                : <ItemCount stock ={detalle?.stock} initial={1} onAdd={onAdd} />
-                }
-
-
-
+                <span>{detalle?.description}</span><br/>
+                <span>Precio: ${detalle?.price}</span><br/>
+                <span>Stock disponible: {detalle?.stock}</span>
               </Card.Text>
+              {
+                purchase
+                  ? <Link className="btn btn-dark" to="/cart">Terminar mi compra</Link>
+                  : <ItemCount stock={detalle?.stock} initial={1} onAdd={onAdd} />
+              }
             </Col>
           </Row>
         </Card.Body>

@@ -1,0 +1,6 @@
+.cart-img {
+  border: 2px solid #1976d2; /* Color del borde */
+  border-radius: 8px;         /* Bordes redondeados */
+  background-color: #e3f2fd;  /* Color de fondo */
+  padding: 6px;               /* Espacio interno */
+}
