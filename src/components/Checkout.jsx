@@ -53,7 +53,7 @@ const Checkout = () => {
   <div className="fondo-seccion">
       {
         orderId ?
-          <h2>
+          <h2 className="text-center">
             Gracias por su compra! Su número de orden es: {orderId}
           </h2>
           :
