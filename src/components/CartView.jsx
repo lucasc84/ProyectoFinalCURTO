@@ -14,12 +14,11 @@ const CartView = () => {
         <div>
         {
         cart.map((compra) => (
-            <div key={compra.id} style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%' }} >
+            <div key={compra.id} className='cart-item' >
 <img
   src={compra.image}
   alt={compra.name}
   className="cart-img"
-  style={{width: '7rem', margin: '1rem'}}
 />
             <span>{compra.name}</span>
             <span>${compra.price}</span>
@@ -32,7 +31,7 @@ const CartView = () => {
   </div>
 
     <span>Total: ${total()}</span>
-    <div  style = {{display: 'flex', justifyContent: 'center', alignItems: 'center', width: '100%', padding: '1rem'}}>
+    <div className='btn-container'>
         <button className= 'btn btn-danger' onClick={() => clear()}>Vaciar carrito</button>
         <Link to = '/checkout' className = 'btn btn-success'>Terminar Compra</Link>
     </div>

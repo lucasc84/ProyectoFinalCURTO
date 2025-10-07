@@ -3,4 +3,23 @@
   border-radius: 8px;         /* Bordes redondeados */
   background-color: #e3f2fd;  /* Color de fondo */
   padding: 6px;               /* Espacio interno */
+  width: 7rem;
+  margin: 1rem;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  gap: 1rem; /* Espacio entre los botones */
+}
+
+.cart-item {
+margin-bottom: 1rem; /* Espacio entre los elementos del carrito */
+display: flex;
+align-items: center;
+justify-content: space-between;
+width: 100%;
 }
