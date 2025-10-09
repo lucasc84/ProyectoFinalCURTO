@@ -7,6 +7,7 @@ import EmptyCart from "./EmptyCart";
 import Card from "react-bootstrap/Card";
 import Row from "react-bootstrap/Row";
 import "./css/Checkout.css";
+import "../index.css";
 
 const Checkout = () => {
   const [buyer, setBuyer] = useState({});

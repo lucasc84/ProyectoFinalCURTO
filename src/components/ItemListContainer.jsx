@@ -5,6 +5,7 @@ import Loader from "./Loader";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "../services/firebase";
 import "../components/css/ItemListContainer.css";
+import "../index.css";
 
 const ItemListContainer = ({ mensaje }) => {
   const [data, setData] = useState([]);

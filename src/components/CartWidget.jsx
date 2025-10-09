@@ -5,6 +5,7 @@ import { useContext } from "react";
 //importo el contexto
 import { CartContext } from "../context/CartContext";
 
+
 const CartWidget = () => {
   console.log("CartWidget Renderizado");
   const { cart, cartQuantity } = useContext(CartContext);

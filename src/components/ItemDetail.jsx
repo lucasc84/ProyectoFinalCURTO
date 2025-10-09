@@ -19,7 +19,7 @@ const ItemDetail = ({ detalle }) => {
   };
 
   return (
-    <div>
+    <div className="fondo-seccion">
       <Card
         bg="info"
         border="primary"

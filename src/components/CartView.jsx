@@ -4,12 +4,13 @@ import { CartContext } from "../context/CartContext";
 import { Link } from "react-router-dom";
 import "./css/CartView.css";
 import { Card, Row } from "react-bootstrap";
+import "../index.css";
 
 const CartView = () => {
   const { cart, clear, removeItem, total } = useContext(CartContext);
 
   return (
-    <div>
+    <div className="fondo-seccion">
       <Card
         bg="info"
         border="primary"

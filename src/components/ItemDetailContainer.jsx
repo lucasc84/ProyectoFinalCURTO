@@ -4,6 +4,7 @@ import { Link, useParams } from "react-router-dom";
 import Loader from "./Loader";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../services/firebase";
+import "../index.css";
 
 const ItemDetailContainer = () => {
   const [detalle, setDetalle] = useState({});
@@ -31,7 +32,7 @@ const ItemDetailContainer = () => {
   }, [id]);
 
   if (invalid) {
-    <div>
+    <div className="fondo-seccion">
       <h2>El producto que buscas no existe</h2>
       <Link to="/" className="btn btn-primary">
         Volver al inicio
