@@ -1,19 +1,18 @@
-/* Separación personalizada para los elementos de la navbar */
 .nav-spacing {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
 }
+
 .logo {
     height: 4rem;
 }
-/* Fondo azul oscuro para la página */
+
 .main-bg-custom {
   background-color: #0a1931;
   min-height: 100vh;
   color: white;
 }
 
-/* Fuente personalizada para los elementos del navbar */
 .navbar-font {
   font-family: 'Montserrat', Arial, sans-serif;
   font-size: 1.2rem;

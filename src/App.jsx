@@ -1,5 +1,3 @@
-//App es el padre de los demas componentes, se copnfigura y se da acceso a la navegación, no se aplican estilos
-
 import NavBarRB from "./components/NavBarRB";
 import ItemListContainer from "./components/ItemListContainer";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -13,26 +11,25 @@ import Checkout from "./components/Checkout";
 function App() {
   return (
     <BrowserRouter>
-    <CartProvider>
-    <NavBarRB />
-      {/* se deja afuera de las rutas para que se vea en todas las paginas */}
+      <CartProvider>
+        <NavBarRB />
 
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <ItemListContainer mensaje="Bienvenidos a la Tienda Online de Poseidon" />
-          }
-        />
-        <Route
-          path="/category/:type"
-          element={<ItemListContainer mensaje="Estas en la sección: " />}
-        />
-        <Route path="/item/:id" element={<ItemDetailContainer />} />
-        <Route path="/cart" element={<CartContainer/>} />
-        <Route path="*" element={<Error404 />} />
-        <Route path="/checkout" element={<Checkout/>} />
-      </Routes>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <ItemListContainer mensaje="Bienvenidos a la Tienda Online de Poseidon" />
+            }
+          />
+          <Route
+            path="/category/:type"
+            element={<ItemListContainer mensaje="Estas en la sección: " />}
+          />
+          <Route path="/item/:id" element={<ItemDetailContainer />} />
+          <Route path="/cart" element={<CartContainer />} />
+          <Route path="*" element={<Error404 />} />
+          <Route path="/checkout" element={<Checkout />} />
+        </Routes>
       </CartProvider>
     </BrowserRouter>
   );

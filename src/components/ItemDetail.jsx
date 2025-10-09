@@ -1,59 +1,67 @@
-// ItemDetail muestra el detalle de un producto seleccionado. Recibe el objeto detalle de ItemDetailContainer por props y lo renderiza.
-
-import ItemCount from './ItemCount'
-import Card from 'react-bootstrap/Card'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
+import ItemCount from "./ItemCount";
+import Card from "react-bootstrap/Card";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 import React, { useContext, useState } from "react";
-import { CartContext } from "../context/CartContext"; // Importa CartContext desde "../context/CartContext"; // Ajusta la ruta si es necesario 
-import { Link } from 'react-router-dom';
+import { CartContext } from "../context/CartContext";
+import { Link } from "react-router-dom";
 const ItemDetail = ({ detalle }) => {
-
-  
-
   const { addItem } = useContext(CartContext);
 
-  // const [quantityAdded, setQuantityAdded] = useState(0);
-  // // Estado para rastrear la cantidad agregada al carrito
-const [purchase, setPurchase] = useState(false);
-
+  const [purchase, setPurchase] = useState(false);
 
   const onAdd = (cantidad) => {
-    console.log(`Se agregaron ${cantidad} unidades de ${detalle?.name} al carrito`)
+    console.log(
+      `Se agregaron ${cantidad} unidades de ${detalle?.name} al carrito`
+    );
     setPurchase(true);
-    addItem(detalle, cantidad) // Llamada a la función addItem del contexto para agregar el item al carrito 
-  }
-
-
-
-
+    addItem(detalle, cantidad);
+  };
 
   return (
-<div>
-      <Card bg="info" border="primary" className="mx-auto my-4 w-100" style={{ maxWidth: '900px' }}>
+    <div>
+      <Card
+        bg="info"
+        border="primary"
+        className="mx-auto my-4 w-100"
+        style={{ maxWidth: "900px" }}
+      >
         <Card.Body>
           <Row>
-            <Col xs={12} md={6} className="d-flex align-items-center justify-content-center">
-              <Card.Img variant="top" src={detalle?.image} alt={detalle?.name} style={{ maxHeight: '300px', width: 'auto' }}/>
+            <Col
+              xs={12}
+              md={6}
+              className="d-flex align-items-center justify-content-center"
+            >
+              <Card.Img
+                variant="top"
+                src={detalle?.image}
+                alt={detalle?.name}
+                style={{ maxHeight: "300px", width: "auto" }}
+              />
             </Col>
             <Col xs={12} md={6}>
               <Card.Title>{detalle?.name}</Card.Title>
               <Card.Text>
-                <span>{detalle?.description}</span><br/>
-                <span>Precio: ${detalle?.price}</span><br/>
+                <span>{detalle?.description}</span>
+                <br />
+                <span>Precio: ${detalle?.price}</span>
+                <br />
                 <span>Stock disponible: {detalle?.stock}</span>
               </Card.Text>
-              {
-                purchase
-                  ? <Link className="btn btn-dark" to="/cart">Terminar mi compra</Link>
-                  : <ItemCount stock={detalle?.stock} initial={1} onAdd={onAdd} />
-              }
+              {purchase ? (
+                <Link className="btn btn-dark" to="/cart">
+                  Terminar mi compra
+                </Link>
+              ) : (
+                <ItemCount stock={detalle?.stock} initial={1} onAdd={onAdd} />
+              )}
             </Col>
           </Row>
         </Card.Body>
       </Card>
     </div>
-  )
-}
+  );
+};
 
-export default ItemDetail
+export default ItemDetail;

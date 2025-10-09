@@ -1,8 +1,8 @@
 .cart-img {
-  border: 2px solid #1976d2; /* Color del borde */
-  border-radius: 8px;         /* Bordes redondeados */
-  background-color: #e3f2fd;  /* Color de fondo */
-  padding: 6px;               /* Espacio interno */
+  border: 2px solid #1976d2;
+  border-radius: 8px;
+  background-color: #e3f2fd;
+  padding: 6px;
   width: 7rem;
   margin: 1rem;
 }
@@ -13,11 +13,11 @@
   align-items: center;
   width: 100%;
   padding: 1rem;
-  gap: 1rem; /* Espacio entre los botones */
+  gap: 1rem;
 }
 
 .cart-item {
-margin-bottom: 1rem; /* Espacio entre los elementos del carrito */
+margin-bottom: 1rem;
 display: flex;
 align-items: center;
 justify-content: space-between;
