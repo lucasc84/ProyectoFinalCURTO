@@ -5,17 +5,27 @@ import Col from "react-bootstrap/Col";
 import React, { useContext, useState } from "react";
 import { CartContext } from "../context/CartContext";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 const ItemDetail = ({ detalle }) => {
   const { addItem } = useContext(CartContext);
 
   const [purchase, setPurchase] = useState(false);
 
   const onAdd = (cantidad) => {
-    console.log(
-      `Se agregaron ${cantidad} unidades de ${detalle?.name} al carrito`
-    );
+    // console.log(
+    //   `Se agregaron ${cantidad} unidades de ${detalle?.name} al carrito`
+    // );
     setPurchase(true);
     addItem(detalle, cantidad);
+    Swal.fire({
+      position: "top-end",
+      icon: "success",
+      iconColor: "#0d6efd",
+      title: `Se agregaron ${cantidad} unidades de ${detalle?.name} al carrito`,
+      showConfirmButton: false,
+      showCancelButton: false,
+      timer: 1500,
+    });
   };
 
   return (

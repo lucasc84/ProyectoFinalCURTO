@@ -5,9 +5,27 @@ import { Link } from "react-router-dom";
 import "./css/CartView.css";
 import { Card, Row } from "react-bootstrap";
 import "../index.css";
+import Swal from "sweetalert2";
 
 const CartView = () => {
   const { cart, clear, removeItem, total } = useContext(CartContext);
+  const preConfirm = () => {
+    Swal.fire({
+      title: "¿Estás seguro?",
+      text: "Se eliminarán todos los productos del carrito.",
+      icon: "warning",
+      showDenyButton: true,
+      confirmButtonText: "Sí, vaciar carrito",
+      DenyButtonText: "Cancelar",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        clear();
+        Swal.fire("Carrito vaciado", "", "success");
+      } else if (result.isDenied) {
+        Swal.fire("Acción cancelada", "", "info");
+      }
+    })
+}
 
   return (
     <div className="fondo-seccion">
@@ -48,7 +66,7 @@ const CartView = () => {
 
       <span>Total: ${total()}</span>
       <div className="btn-container">
-        <button className="btn btn-danger" onClick={() => clear()}>
+        <button className="btn btn-danger" onClick={preConfirm}>
           Vaciar carrito
         </button>
         <Link to="/checkout" className="btn btn-success">
