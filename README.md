@@ -12,13 +12,13 @@ Este proyecto fue realizado para el curso de React con JS de CoderHouse
 ### Instalación ⚙️
 
 1. Clone el repositorio
-2. Hacer el comando `cd XXXXXXXXXX` para moverse a la carpeta raiz del proyecto
+2. Hacer el comando `cd ProyectoFinalCURTO` para moverse a la carpeta raiz del proyecto
 3. Instale dependencias con el comando `npm install`
 4. Para ejectuar el proyecto de manera local ejecute el comando `npm run dev`
 
 
 ### Version Host 💻
-Si desea ver el proyecto online, puede ingresar al siguiente link [Coder Flex App](https://XXXXXXX.vercel.app/)
+Si desea ver el proyecto online, puede ingresar al siguiente link [Coder Flex App](https://proyecto-final-curto.vercel.app/)
 
 
 ### Librerias utilizadas 📖
