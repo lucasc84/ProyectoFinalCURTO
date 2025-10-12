@@ -12,9 +12,6 @@ const ItemDetail = ({ detalle }) => {
   const [purchase, setPurchase] = useState(false);
 
   const onAdd = (cantidad) => {
-    // console.log(
-    //   `Se agregaron ${cantidad} unidades de ${detalle?.name} al carrito`
-    // );
     setPurchase(true);
     addItem(detalle, cantidad);
     Swal.fire({

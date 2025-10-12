@@ -10,39 +10,20 @@ import "./css/Checkout.css";
 import "../index.css";
 
 const Checkout = () => {
-  const [buyer, setBuyer] = useState({});
-  const [checkMail, setCheckMail] = useState("");
   const [orderId, setOrderId] = useState(null);
-
   const { cart, total, clear } = useContext(CartContext);
 
-  const buyerData = (e) => {
-    setBuyer({
-      ...buyer,
-      [e.target.name]: e.target.value,
-    });
-  };
-
   const finalizarCompra = (e) => {
-    e.preventDefault();
-    if (!buyer.name || !buyer.lastname || !buyer.email || !buyer.address) {
-      alert("Complete los campos!");
-    } else if (buyer.email !== checkMail) {
-      alert("Los correos no coinciden!");
-    } else {
+
+
       let order = {
-        comprador: buyer,
+        comprador: {
+         } ,
         compras: cart,
         total: total(),
         fecha: serverTimestamp(),
       };
-      const ventas = collection(db, "orders");
-      addDoc(ventas, order)
-        .then((res) => {
-          setOrderId(res.id);
-          clear();
-        })
-        .catch((error) => console.log(error));
+ 
     }
   };
 
@@ -74,7 +55,6 @@ const Checkout = () => {
                     className="form-control"
                     placeholder="Ingrese su nombre"
                     type="text"
-                    onChange={buyerData}
                   />
 
                   <input
@@ -82,7 +62,6 @@ const Checkout = () => {
                     className="form-control"
                     placeholder="Ingrese su apellido"
                     type="text"
-                    onChange={buyerData}
                   />
 
                   <input
@@ -90,7 +69,6 @@ const Checkout = () => {
                     className="form-control"
                     placeholder="Ingrese su dirección de envio"
                     type="text"
-                    onChange={buyerData}
                   />
 
                   <input
@@ -98,7 +76,6 @@ const Checkout = () => {
                     className="form-control"
                     placeholder="Ingrese su correo"
                     type="email"
-                    onChange={buyerData}
                   />
 
                   <input
