@@ -1,3 +1,40 @@
+
+
+
+
+# Coder Flex App 🛒
+
+Este proyecto fue realizado para el curso de React con JS de CoderHouse
+
+![Logo](/public/logo.png)
+
+
+### Instalación ⚙️
+
+1. Clone el repositorio
+2. Hacer el comando `cd XXXXXXXXXX` para moverse a la carpeta raiz del proyecto
+3. Instale dependencias con el comando `npm install`
+4. Para ejectuar el proyecto de manera local ejecute el comando `npm run dev`
+
+
+### Version Host 💻
+Si desea ver el proyecto online, puede ingresar al siguiente link [Coder Flex App](https://XXXXXXX.vercel.app/)
+
+
+### Librerias utilizadas 📖
+
+
+- [Firebase](https://firebase.google.com/): como base de datos.
+- [React Router Dom ](https://reactrouter.com/): utilizada para la navegacion interna de la app.
+- [React Bootstrap](https://react-bootstrap.netlify.app/): para el styling de la app.
+
+
+## Realizado por:
+
+- [@lucasc84](https://github.com/lucasc84)
+
+----------------------------
+
 # CODERHOUSE
 Curso de React JS  
 Comisión  81735 
