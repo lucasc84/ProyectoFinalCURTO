@@ -17,6 +17,7 @@ const CartView = () => {
       showDenyButton: true,
       confirmButtonText: "Sí, vaciar carrito",
       DenyButtonText: "Cancelar",
+      timer: 2000,
     }).then((result) => {
       if (result.isConfirmed) {
         clear();

@@ -9,3 +9,13 @@
   min-height: 100vh;
   padding: 2rem 0;
 }
+
+.swal2-title {
+  font-size: 22px ;
+}
+
+.swal2-popup {
+  width: 250px ;
+  height: auto ;
+  position: top-end;
+}

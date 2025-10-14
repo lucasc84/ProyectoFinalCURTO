@@ -21,7 +21,7 @@ const ItemDetail = ({ detalle }) => {
       title: `Se agregaron ${cantidad} unidades de ${detalle?.name} al carrito`,
       showConfirmButton: false,
       showCancelButton: false,
-      timer: 1500,
+      timer: 2000,
     });
   };
 
