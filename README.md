@@ -1,24 +1,46 @@
-
-
-
-
-# Coder Flex App 🛒
-
-Este proyecto fue realizado para el curso de React con JS de CoderHouse
+# Entrega Final – E-commerce “Poseidón” 🛒
 
 ![Logo](/public/logo.png)
+
+Este proyecto constituye la entrega final del curso de React JS (Coderhouse).
+Consiste en el desarrollo completo del front-end de una web app de e-commerce, implementada con React, que permite navegar un catálogo de productos, ver detalles, agregar ítems al carrito y completar el proceso de compra con registro en Firebase / Firestore.
+
+La aplicación sigue las consignas del Proyecto Final, incorporando:
+
+- Routing dinámico con React Router.
+
+- Context API para el manejo global del carrito.
+
+- Firebase Firestore como base de datos en la nube.
+
+- Formularios y validaciones con react-hook-form.
+
+- Bootstrap y componentes personalizados para la UI.
+
+- Deploy en Vercel.
+
+El proyecto integra todos los contenidos vistos durante el curso y refleja la evolución del aprendizaje, desde las primeras preentregas hasta un proyecto final completo, funcional y escalable.
 
 
 ### Instalación ⚙️
 
-1. Clone el repositorio
-2. Hacer el comando `cd ProyectoFinalCURTO` para moverse a la carpeta raiz del proyecto
-3. Instale dependencias con el comando `npm install`
-4. Para ejectuar el proyecto de manera local ejecute el comando `npm run dev`
+1. Clonar el repositorio:
+
+```
+git clone https://github.com/lucasc84/ProyectoFinalCURTO.git
+```
+
+2. Hacer el comando: `cd ProyectoFinalCURTO` para moverse a la carpeta raiz del proyecto
+
+3. Instalar dependencias con el comando `npm install`
+
+4. Para ejectuar el proyecto de manera local, ejecutar el comando `npm run dev` y luego abrir en el navegador la dirección que aparece en consola
 
 
 ### Version Host 💻
-Si desea ver el proyecto online, puede ingresar al siguiente link [Coder Flex App](https://proyecto-final-curto.vercel.app/)
+
+El proyecto está desplegado en Vercel.
+Si desea ver el proyecto online, puede ingresar al siguiente link: [Entrega Final – E-commerce “Poseidón”](https://proyecto-final-curto.vercel.app/)
 
 
 ### Librerias utilizadas 📖
@@ -32,56 +54,3 @@ Si desea ver el proyecto online, puede ingresar al siguiente link [Coder Flex Ap
 ## Realizado por:
 
 - [@lucasc84](https://github.com/lucasc84)
-
-----------------------------
-
-# CODERHOUSE
-Curso de React JS  
-Comisión  81735 
-Alumno: Lucas Curto
-
-Proyecto:  
-Preentrega 2 - **Navega las rutas**
-
----
-
-## Descripción del proyecto
-
-Este proyecto corresponde a la segunda preentrega del curso de React JS.  
-La consigna se centra en implementar **navegación con React Router**, rutas dinámicas por categoría y detalle de producto, además de contenedores que gestionan datos simulados de manera asíncrona.
-
-El proyecto toma como base la **Preentrega 1**, donde se había creado la estructura inicial con NavBar, CartWidget e ItemListContainer, y evoluciona incorporando los nuevos contenidos trabajados en clase.
-
----
-
-## Funcionalidades
-
-- **Navegación principal (NavBar)**  
-  - Implementada con `NavLink` para permitir navegación sin recarga.  
-  - Contiene accesos a las tres categorías principales: Hombre, Mujer y Accesorios.  
-  - Incluye el `CartWidget` como en la entrega anterior.
-
-- **Catálogo de productos**  
-  - `ItemListContainer` recibe parámetros de la URL con `useParams`.  
-  - Filtra productos por categoría (`/category/:type`) o muestra todos (`/`).  
-  - Los productos se obtienen mediante un **Promise simulado**, como se trabajó en clase.
-
-- **Detalle de producto**  
-  - `ItemDetailContainer` obtiene el producto a partir de su `id` (`/item/:id`).  
-  - Muestra un componente `ItemDetail` con información detallada.  
-  - Incluye un placeholder de `ItemCount` como base para la próxima entrega.
-
-- **Rutas dinámicas y 404**  
-  - `/` → listado completo.  
-  - `/category/:type` → listado filtrado.  
-  - `/item/:id` → detalle de producto.  
-  - `*` → página de error 404 con opción de volver al inicio.
-
----
-
-## Nota
-
-Este proyecto muestra cómo se fue **escalando con los conocimientos adquiridos en clase**:  
-- La Preentrega 1 sentó las bases con los primeros componentes.  
-- En la Preentrega 2 incorporamos **ruteo dinámico**, **contenedores asincrónicos** y la **estructura de detalle**.  
----

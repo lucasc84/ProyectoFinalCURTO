@@ -5,7 +5,6 @@ import { CartContext } from "../context/CartContext";
 
 
 const CartWidget = () => {
-  console.log("CartWidget Renderizado");
   const { cart, cartQuantity } = useContext(CartContext);
 
   return (

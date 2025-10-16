@@ -7,7 +7,6 @@ export const CartProvider = ({ children }) => {
 
   const addItem = (item, qty) => {
     if (isInCart(item.id)) {
-      console.log("El item ya existe en el carrito");
       const carritoActualizado = cart.map((prod) => {
         if (prod.id === item.id) {
           return { ...prod, quantity: prod.quantity + qty };
